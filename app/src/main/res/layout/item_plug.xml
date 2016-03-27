@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/white">
+
+
+    <ImageView
+
+        android:id="@+id/power"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:src="@drawable/power_off"
+        />
+
+    <TextView
+
+        android:id="@+id/device_name"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@id/power"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/power"
+        android:gravity="left|bottom"
+        android:text="插孔1"
+        android:textColor="#5e5e5e"
+        android:textSize="18sp"
+        android:layout_above="@+id/xiaoxi" />
+
+    <TextView
+        android:id="@+id/xiaoxi"
+        android:layout_width="240dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/power"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/power"
+        android:gravity="left|center"
+        android:text="6点开 8点关 3min延时开 3min延时关"
+        android:textColor="#969696"
+        android:textSize="14sp" />
+
+    <!--<ImageView-->
+
+        <!--android:id="@+id/edit_device_name"-->
+        <!--android:layout_width="32dp"-->
+        <!--android:layout_height="32dp"-->
+        <!--android:layout_alignRight="@id/xiaoxi"-->
+        <!--android:layout_alignTop="@id/power"-->
+        <!--android:src="@drawable/edit_devices_name" />-->
+
+
+</RelativeLayout>

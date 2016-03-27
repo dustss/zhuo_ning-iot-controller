@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEC768"
+    android:orientation="vertical"
+    android:weightSum="11">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="智能照明"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="52dp"
+            android:background="#ffffff"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@drawable/light_background"
+        >
+        <TextView
+            android:id="@+id/light_state_info_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开关信息"
+            android:textColor="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="#ffffff"
+        >
+        <!--android:progressDrawable="@drawable/light_pixer_color2"-->
+        <!--android:progressDrawable="@drawable/shap_process_color"-->
+        <SeekBar
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:id="@+id/seekBar"
+            android:indeterminate="false"
+            android:max="100"
+            android:progressDrawable="@drawable/light_pixer_sedu"
+            android:thumb="@drawable/shape_process_thumb"
+            android:progress="70"
+            android:layout_above="@+id/textView9"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="灯色调节"
+            android:id="@+id/textView10"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/seekBar2"
+            android:layout_alignStart="@+id/seekBar2"
+            android:layout_marginBottom="29dp"/>
+
+        <SeekBar
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:id="@+id/seekBar2"
+            android:progressDrawable="@drawable/shap_process_grey"
+            android:thumb="@drawable/shape_process_thumb"
+            android:progress="20"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/textView9"
+            android:layout_alignStart="@+id/textView9"
+            android:layout_marginBottom="87dp"/>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="色度调节"
+            android:id="@+id/textView9"
+            android:layout_marginTop="10dp"
+            android:layout_above="@+id/seekBar2"
+            android:layout_alignLeft="@+id/seekBar"
+            android:layout_alignStart="@+id/seekBar"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#f4f4f4"
+        >
+
+
+
+        <ImageView
+            android:id="@+id/light_on_off"
+            android:layout_width="102dp"
+            android:layout_height="43dp"
+            android:src="@drawable/light_toggle_off"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_above="@+id/textView8"/>
+
+
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/light_delay_time"
+            android:layout_marginRight="45dp"
+            android:layout_marginEnd="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/imageView6"
+            android:layout_above="@+id/textView6"/>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/light_set_time"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/textView7"/>
+
+        <TextView
+            android:text="开关"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/light_on_off"
+            android:layout_alignEnd="@+id/light_on_off"
+            android:layout_marginRight="36dp"
+            android:layout_marginEnd="36dp"
+            android:id="@+id/textView8"/>
+        <TextView
+            android:text="定时"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView7"/>
+        <TextView
+            android:text="延时"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/imageView6"
+            android:layout_alignEnd="@+id/imageView6"
+            android:layout_marginRight="14dp"
+            android:layout_marginEnd="14dp"
+            android:id="@+id/textView6"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

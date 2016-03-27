@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="black_shadow">#55000000</color>
+    <color name="black">#ff000000</color>
+    <color name="titlebar_btn_text">#ffffffff</color>
+    <color name="gray">#ffbfbfbf</color>
+    <color name="light_gray">#E2E2E2</color>
+    <color name="blue">#003181</color>
+    <color name="deep_gray">#686868</color>
+    <color name="red">#ff9f483a</color>
+    <color name="transparent">#00000000</color>
+    <color name="line">#ffababab</color>
+    <color name="translucent_bg">#44000000</color>
+    <color name="transparent_50">#E0000000</color>
+    <color name="transparent_25">#40000000</color>
+    <color name="pink">#fffeefd0</color>
+    <color name="red_btn">#ffef583f</color>
+    <color name="orange">#F56700</color>
+    <color name="yellow_stroke">#FBDFBD</color>
+    <color name="yellow_solid">#FEF8F0</color>
+    <color name="shake">#ffffd39b</color>
+    <color name="ambow_bg">#E7E3DE</color>
+    <color name="light_blue">#006080</color>
+    <color name="dialog_black">#666666</color>
+    <color name="home_function_default_bg">#EEE6DC</color>
+    <color name="home_function_select_bg">#DCDCDC</color>
+    <color name="news_item_default_bg">#DCDCDC</color>
+    <color name="news_item_select_bg">#C9C9C9</color>
+    <color name="public_title_select_bg">#55000000</color>
+    <color name="dialog_button_bg">#425F99</color>
+    <color name="dark_green">#009000</color>
+</resources>

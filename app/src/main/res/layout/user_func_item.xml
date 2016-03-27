@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:padding="10.0dip" >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="36dip"
+        android:layout_height="36dip"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/light" />
+
+    <TextView
+        android:id="@+id/func_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginTop="2.0dip"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_centerInParent="true"
+        android:singleLine="true"
+        android:text="设备名称"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/icon"
+        android:background="#eee"
+        android:visibility="invisible"/>-->
+
+</RelativeLayout>

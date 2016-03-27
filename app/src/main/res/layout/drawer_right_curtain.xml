@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="120dp"
+              android:layout_height="match_parent"
+              android:layout_gravity="right"
+              android:orientation="vertical"
+              android:weightSum="24">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="布帘定时"
+        android:textColor="#354b62"
+        android:textSize="12sp"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:src="@drawable/icon_set_time"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="6:00开 10:00关"
+        android:textColor="#454545"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="布帘延时"
+        android:textColor="#354b62"
+        android:textSize="12sp"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:src="@drawable/icon_delay"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="3min"
+        android:textColor="#454545"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="纱帘定时"
+        android:textColor="#354b62"
+        android:textSize="12sp"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:src="@drawable/icon_set_time"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="6:00开 10:00关"
+        android:textColor="#454545"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="纱帘延时"
+        android:textColor="#354b62"
+        android:textSize="12sp"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:src="@drawable/icon_delay"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="3min"
+        android:textColor="#454545"
+        android:textSize="12sp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\machenike\.gradle\caches\modules-2\files-2.1\com.readystatesoftware.systembartint\systembartint\1.0.3\de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287\systembartint-1.0.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287">
+        <dex dex="D:\work_space\android\zhuoning\app\build\intermediates\pre-dexed\debug\systembartint-1.0.3_2bc82aa51a4687403b29c944007c30c7a88e8c5c.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\.gradle\caches\modules-2\files-2.1\cz.msebera.android\httpclient\4.3.6\526a9f794eab830eae4f23a62c572878b3f491ab\httpclient-4.3.6.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
+        <dex dex="D:\work_space\android\zhuoning\app\build\intermediates\pre-dexed\debug\httpclient-4.3.6_db6a462467553f64b2b2d7a64d4d28e084af5409.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="D:\work_space\android\zhuoning\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1_4265cc7fb5a2b940b1f836e1088e004da3d38d6d.jar" />
+    </item>
+    <item
+        jar="D:\work_space\android\zhuoning\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="D:\work_space\android\zhuoning\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-22.2.1_a7ecf686d45a923b033c513832ae42f8ef8face4.jar" />
+    </item>
+    <item
+        jar="D:\work_space\android\zhuoning\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="D:\work_space\android\zhuoning\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.2.1_af21c59fda5012edf7ee80eebb1947e16f808e93.jar" />
+    </item>
+    <item
+        jar="D:\work_space\android\zhuoning\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="D:\work_space\android\zhuoning\app\build\intermediates\pre-dexed\debug\com.android.support-design-22.2.1_ae72220e540c39149c24bd3c847065a3fb882fd7.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="D:\work_space\android\zhuoning\app\build\intermediates\pre-dexed\debug\gson-2.2.4_e761cbeb228f83315fd4e2214e726f7fc5ea87c0.jar" />
+    </item>
+    <item
+        jar="D:\work_space\android\zhuoning\app\libs\nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="D:\work_space\android\zhuoning\app\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0_0f470dbbdaada10da773ff27b47016893b2d0a83.jar" />
+    </item>
+    <item
+        jar="D:\work_space\android\zhuoning\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="D:\work_space\android\zhuoning\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1_432c1f7076fb21f02f03bf27a8ca60d0faa25b47.jar" />
+    </item>
+    <item
+        jar="D:\work_space\android\zhuoning\app\libs\afinal_0.5_bin.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="89729e3bc7f76890363b10e1e0dc5e57964c7807">
+        <dex dex="D:\work_space\android\zhuoning\app\build\intermediates\pre-dexed\debug\afinal_0.5_bin_2f2a0977888753645cc17ca5a482c1a058bd712e.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\.gradle\caches\modules-2\files-2.1\com.loopj.android\android-async-http\1.4.9\386a4339ffe52d5d63e80f9bed8d2b1d1a418249\android-async-http-1.4.9.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
+        <dex dex="D:\work_space\android\zhuoning\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.9_1d26898d73781cee82a07d3092321953e325e486.jar" />
+    </item>
+    <item
+        jar="D:\work_space\android\zhuoning\app\build\intermediates\exploded-aar\com.baoyz.swipemenulistview\library\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8ec8378e8d7aa3104f60823e6350f2728d3609ba">
+        <dex dex="D:\work_space\android\zhuoning\app\build\intermediates\pre-dexed\debug\com.baoyz.swipemenulistview-library-1.3.0_8da730ebe279862f427bf8e62ea44432f3f70f8f.jar" />
+    </item>
+
+</items>

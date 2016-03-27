@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#80FFFFFF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_chat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_chat_small"
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+                <ImageView
+                    android:id="@+id/iv_chat"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/chat" />
+
+                <TextView
+                    android:id="@+id/tv_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设备列表"
+                    android:textColor="#008000"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_find"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:id="@+id/ll_find_small"
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_find"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/find1" />
+
+                <TextView
+                    android:id="@+id/tv_find"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发现"
+                    android:textColor="#A6A6A6"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_me"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_me_small"
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_me"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/me1" />
+
+                <TextView
+                    android:id="@+id/tv_me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用户"
+                    android:textColor="#A6A6A6"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

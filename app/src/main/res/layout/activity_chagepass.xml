@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_weight="10"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="更改密码"
+        android:background="#25AE77"
+        android:textColor="@color/white"
+        />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="9"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+        <TextView
+            android:text="请输入原始密码"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_margin="10dp"
+
+            />
+        <TextView
+            android:text="请输入新密码"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_margin="10dp"
+ />
+        <EditText
+            android:padding="20dp"
+            android:layout_margin="10dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="179dp"
+            android:layout_height="60dp"
+            android:padding="20dp"
+            android:layout_margin="10dp"
+            android:text="确认修改"
+            android:textColor="@color/white"
+            android:background="@drawable/feedback_send_button"
+            android:id="@+id/button2"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.39" />
+
+
+</LinearLayout>
+
+</LinearLayout>
