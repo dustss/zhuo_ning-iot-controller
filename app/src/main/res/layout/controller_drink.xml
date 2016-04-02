@@ -88,7 +88,7 @@
         android:layout_width="120dp"
         android:layout_height="match_parent"
         android:layout_gravity="right"
-        android:name="zhuoning.youthlife.cn.zhuoning.cn.youthlife.zhuoning.fragment.DrinkingFragment"
+        android:name="zhuoning.youthlife.cn.zhuoning.cn.youthlife.zhuoning.device_controller.DrinkingFragment"
         android:tag="RIGHT"
         />
 </android.support.v4.widget.DrawerLayout>

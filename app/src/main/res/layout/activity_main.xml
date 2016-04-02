@@ -8,7 +8,7 @@
     android:fitsSystemWindows="true"
     android:clipToPadding="false"
     android:background="#FFF"
-    tools:context=".cn.youthlife.zhuoning.activity.BaseActivity">
+    tools:context=".cn.youthlife.zhuoning.base.BaseActivity">
 
     <include
         android:id="@+id/include_actionbar"
