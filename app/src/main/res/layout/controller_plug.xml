@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="#6BC69B"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+              android:background="#6BC69B"
+              android:orientation="vertical"
     >
 
 <TextView
@@ -17,20 +17,20 @@
     android:textSize="18sp"
     />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4"
         >
 
         <ImageView
-            android:src="@drawable/plug_ui"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/aicon_plug"/>
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 
@@ -41,8 +41,8 @@
         android:layout_height="0dp"
         android:layout_weight="6"
         android:background="@color/white"
-        android:dividerHeight="1px"
         android:divider="@color/gray"
+        android:dividerHeight="1px"
         >
 
     </com.baoyz.swipemenulistview.SwipeMenuListView>

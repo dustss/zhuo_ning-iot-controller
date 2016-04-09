@@ -1,26 +1,20 @@
 apply plugin: 'com.android.application'
 //add plugin for java 8 lambda expression
 apply plugin: 'me.tatarka.retrolambda'
-//lintcleaner
-apply plugin: 'com.droidtitan.lintcleaner'
+
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "zhuoning.youthlife.cn.zhuoning"
-        minSdkVersion 15
-        targetSdkVersion 22
+        minSdkVersion 19
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+
     //add compileOptions for java 8 under Android
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -29,17 +23,21 @@ android {
 }
 
 dependencies {
-    //安卓 异步http请求
+    //async http client
     compile 'com.loopj.android:android-async-http:1.4.9'
-    //实现滑动出现侧边栏 SwipeMenuListView
+    //SwipeMenuListView
     compile 'com.baoyz.swipemenulistview:library:1.3.0'
-    //DrawerLayout 动画支持
+    //DrawerLayout animation
     compile files('libs/nineoldandroids-2.4.0.jar')
+    //BufferKnife
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+
 
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:22.2.1'
-    compile 'com.android.support:design:22.2.1'
-    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.google.code.gson:gson:2.4'
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
 
 }

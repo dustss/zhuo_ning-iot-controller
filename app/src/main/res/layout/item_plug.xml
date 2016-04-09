@@ -10,10 +10,10 @@
         android:id="@+id/power"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:layout_margin="5dp"
+        android:contentDescription="电源开关"
         android:src="@drawable/power_off"
         />
 
@@ -22,23 +22,23 @@
         android:id="@+id/device_name"
         android:layout_width="100dp"
         android:layout_height="20dp"
+        android:layout_above="@+id/xiaoxi"
         android:layout_alignTop="@id/power"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@id/power"
-        android:gravity="left|bottom"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/power"
+        android:gravity="start|bottom"
         android:text="插孔1"
         android:textColor="#5e5e5e"
-        android:textSize="18sp"
-        android:layout_above="@+id/xiaoxi" />
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/xiaoxi"
         android:layout_width="240dp"
         android:layout_height="30dp"
         android:layout_alignBottom="@id/power"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@id/power"
-        android:gravity="left|center"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/power"
+        android:gravity="start|center"
         android:text="6点开 8点关 3min延时开 3min延时关"
         android:textColor="#969696"
         android:textSize="14sp" />

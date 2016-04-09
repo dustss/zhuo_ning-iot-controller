@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <Button
+        android:id="@+id/Register"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Register"/>
+
+    <Button
+        android:id="@+id/Login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Login"/>
+
+
+    <Button
+        android:id="@+id/DeviceActivated"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="DeviceActivated"/>
+
+    <Button
+        android:id="@+id/GetDeviceList"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="GetDeviceList"/>
+
+    <Button
+        android:id="@+id/GetDeviceInfo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="GetDeviceInfo"/>
+
+    <Button
+        android:id="@+id/SendCmdToDevice"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="SendCmdToDevice"/>
+
+    <Button
+        android:id="@+id/SendTimerCmdToDevice"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="SendTimerCmdToDevice"/>
+
+    <Button
+        android:id="@+id/UnbindDevice"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="UnbindDevice"/>
+
+    <Button
+        android:id="@+id/UpdateDeviceInfo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="UpdateDeviceInfo"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+
+</LinearLayout>

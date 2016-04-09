@@ -4,27 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:fitsSystemWindows="true"
-    android:clipToPadding="false"
     android:background="#FFF"
-    tools:context=".cn.youthlife.zhuoning.base.BaseActivity">
+              android:clipToPadding="false"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
 
-    <include
-        android:id="@+id/include_actionbar"
-        layout="@layout/layout_actionbar" />
+    <include layout="@layout/layout_actionbar" />
 
     <FrameLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#FFF"
-        android:layout_weight="1" >
+        android:layout_weight="1"
+        android:background="#FFF">
 
     </FrameLayout>
 
-    <include
-        android:id="@+id/include_bottom"
-        layout="@layout/layout_bottom" />
+    <include layout="@layout/layout_bottom" />
 
 </LinearLayout>

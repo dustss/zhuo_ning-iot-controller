@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="zhuoning.youthlife.cn.zhuoning"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest
+    package="zhuoning.youthlife.cn.zhuoning"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
+<!-- -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
 
     <application
         android:allowBackup="true"
@@ -17,7 +19,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".cn.youthlife.zhuoning.user_login.LoginActivity"
+            android:name=".user_login.LoginActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
@@ -33,58 +35,53 @@
         </activity>
 
         <activity
-            android:name=".cn.youthlife.zhuoning.device_activate.DMActivateActivity"
+            android:name=".device_activate.DMActivateActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
-            android:name=".cn.youthlife.zhuoning.base.BaseActivity"
+            android:name=".base.BaseActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             >
 
         </activity>
         <activity
-            android:name=".cn.youthlife.zhuoning.user_login.RegActivity"
+            android:name=".user_login.RegActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
         <activity
-            android:name=".cn.youthlife.zhuoning.user_login.ForgetPassActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
-
-        <activity
-            android:name=".cn.youthlife.zhuoning.user_center.FeedbackActivity"
+            android:name=".user_login.ForgetPassActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
 
         <activity
-            android:name=".cn.youthlife.zhuoning.user_center.MessageActivity"
+            android:name=".user_center.FeedbackActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
 
         <activity
-            android:name=".cn.youthlife.zhuoning.user_center.ChangePassActivity"
+            android:name=".user_center.MessageActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
 
         <!--智能插座的控制界面-->
         <activity
-            android:name=".cn.youthlife.zhuoning.device_controller.PlugControllerActivity"
+            android:name=".device_controller.PlugControllerActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
         </activity>
         <!-- 饮水机的控制界面 -->
         <activity
-            android:name=".cn.youthlife.zhuoning.device_controller.DrinkControllerActivity"
+            android:name=".device_controller.DrinkControllerActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         </activity>
 
         <!-- 电动窗帘的控制界面-->
         <activity
-            android:name=".cn.youthlife.zhuoning.device_controller.Curtain1ControllerActivity"
+            android:name=".device_controller.Curtain1ControllerActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
@@ -92,7 +89,7 @@
         </activity>
         <!-- 双窗帘页面-->
         <activity
-            android:name=".cn.youthlife.zhuoning.device_controller.Curtain2ControllerActivity"
+            android:name=".device_controller.Curtain2ControllerActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
@@ -100,11 +97,33 @@
 
         <!--智能照明-->
         <activity
-            android:name=".cn.youthlife.zhuoning.device_controller.LightControllerActivity"
+            android:name=".device_controller.LightControllerActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         </activity>
 
+        <!-- 激活页面-->
+        <activity
+            android:name=".device_activate.LightActivateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity
+            android:name=".device_activate.PlugActivateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity
+            android:name=".device_activate.DrinkActivateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity
+            android:name=".device_activate.CurtainActivateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
+        <activity
+            android:name=".device_activate.WIFIConnectedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
 
 
     </application>

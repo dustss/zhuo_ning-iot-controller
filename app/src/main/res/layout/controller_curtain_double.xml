@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout_curtain"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout_curtain"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -36,10 +36,8 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
                 android:onClick="OpenRightMenu"
                 android:src="@drawable/menu_icon"/>
         </RelativeLayout>
@@ -57,96 +55,87 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/aicon_curtain"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="115dp"
-                android:background="@drawable/icon_curtain"/>
+                android:layout_marginTop="70dp"/>
 
             <TextView
+                android:id="@+id/textView4"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
-                android:text="布帘控制"
-                android:textSize="18sp"
-                android:textColor="#8e8e8e"
-                android:id="@+id/textView4"
                 android:layout_centerVertical="true"
                 android:layout_toStartOf="@id/imageView"
-                android:layout_toLeftOf="@id/imageView"/>
+                android:text="布帘控制"
+                android:textColor="#8e8e8e"
+                android:textSize="18sp"/>
 
             <TextView
+                android:id="@+id/textView5"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
-                android:text="纱帘控制"
-                android:textSize="18sp"
-                android:textColor="#8e8e8e"
-                android:layout_below="@id/textView4"
-                android:layout_alignLeft="@id/textView4"
                 android:layout_alignStart="@id/textView4"
+                android:layout_below="@id/textView4"
                 android:layout_marginTop="96dp"
-                android:id="@+id/textView5"/>
+                android:text="纱帘控制"
+                android:textColor="#8e8e8e"
+                android:textSize="18sp"/>
 
 
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:background="@drawable/open_unclicked"
+                android:layout_alignStart="@id/textView4"
                 android:layout_below="@id/textView4"
-                android:layout_alignLeft="@id/textView4"
-                android:layout_alignStart="@id/textView4"/>
+                android:background="@drawable/open_unclicked"/>
             <ImageView
+                android:id="@+id/imageView_pasude"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:background="@drawable/pause_unclicked"
                 android:layout_below="@id/textView4"
-                android:layout_toRightOf="@id/textView4"
                 android:layout_toEndOf="@id/textView4"
-                android:id="@+id/imageView_pasude"/>
+                android:background="@drawable/pause_unclicked"/>
             <ImageView
+                android:id="@+id/imageView_close"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:background="@drawable/close_unclicked"
                 android:layout_alignTop="@id/imageView_pasude"
-                android:layout_toRightOf="@id/imageView"
                 android:layout_toEndOf="@id/imageView"
-                android:id="@+id/imageView_close"/>
+                android:background="@drawable/close_unclicked"/>
 
 
             <ImageView
+                android:id="@+id/imageView3"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:background="@drawable/open_unclicked"
-                android:layout_below="@id/textView5"
-                android:layout_alignLeft="@id/textView5"
                 android:layout_alignStart="@id/textView5"
-                android:id="@+id/imageView3"/>
+                android:layout_below="@id/textView5"
+                android:background="@drawable/open_unclicked"/>
             <ImageView
+                android:id="@+id/imageView4"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:background="@drawable/pause_unclicked"
                 android:layout_alignTop="@id/imageView3"
-                android:layout_toRightOf="@id/textView5"
                 android:layout_toEndOf="@id/textView5"
-                android:id="@+id/imageView4"/>
+                android:background="@drawable/pause_unclicked"/>
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:background="@drawable/close_unclicked"
+                android:layout_alignStart="@id/imageView_close"
                 android:layout_alignTop="@id/imageView4"
-                android:layout_alignLeft="@id/imageView_close"
-                android:layout_alignStart="@id/imageView_close"/>
+                android:background="@drawable/close_unclicked"/>
 
 
         </RelativeLayout>
     </LinearLayout>
 
     <fragment
-        android:id="@+id/drawer_curtain_right_slide"
+        android:name="zhuoning.youthlife.cn.zhuoning.device_controller.CurtainFragment"
         android:layout_width="120dp"
         android:layout_height="match_parent"
-        android:layout_gravity="right"
-        android:name="zhuoning.youthlife.cn.zhuoning.cn.youthlife.zhuoning.device_controller.CurtainFragment"
+        android:layout_gravity="end"
         android:tag="RIGHT"
         tools:layout="@layout/drawer_right_curtain"/>
 </android.support.v4.widget.DrawerLayout>

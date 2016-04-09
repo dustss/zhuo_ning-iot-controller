@@ -36,8 +36,8 @@
         android:ellipsize="end"
         android:lineSpacingExtra="2.0dip"
         android:maxLines="1"
-        android:textColor="#000000"
         android:text="在线"
+        android:textColor="#000000"
         android:textSize="10sp" />
 
     <LinearLayout

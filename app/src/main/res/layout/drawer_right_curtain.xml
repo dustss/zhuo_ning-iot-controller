@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="120dp"
               android:layout_height="match_parent"
-              android:layout_gravity="right"
+              android:layout_gravity="end"
               android:orientation="vertical"
               android:weightSum="24">
 
@@ -22,6 +22,7 @@
         android:layout_height="0dp"
         android:layout_weight="3"
         android:src="@drawable/icon_set_time"
+        android:contentDescription="设置时间"
         />
 
     <TextView
@@ -49,6 +50,7 @@
         android:layout_height="0dp"
         android:layout_weight="3"
         android:src="@drawable/icon_delay"
+        android:contentDescription="设置延时"
         />
 
     <TextView

@@ -62,10 +62,10 @@
                 android:id="@+id/imageView_open"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:background="@drawable/selector_curtain_open"
                 android:layout_alignTop="@+id/imageView_pause"
                 android:layout_toLeftOf="@+id/imageView"
                 android:layout_toStartOf="@+id/imageView"
+                android:background="@drawable/selector_curtain_open"
                 android:button="@null"
                 android:checked="false"/>
 
@@ -82,13 +82,13 @@
 
             <RadioButton
                 android:id="@+id/imageView_close"
-                android:button="@null"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:background="@drawable/selector_curtain_close"
                 android:layout_alignTop="@+id/imageView_pause"
+                android:layout_toEndOf="@+id/imageView"
                 android:layout_toRightOf="@+id/imageView"
-                android:layout_toEndOf="@+id/imageView"/>
+                android:background="@drawable/selector_curtain_close"
+                android:button="@null"/>
 
 
 
@@ -119,8 +119,7 @@
     </LinearLayout>
 
     <fragment
-        android:id="@+id/drawer_curtain_right_slide"
-        android:name="zhuoning.youthlife.cn.zhuoning.cn.youthlife.zhuoning.device_controller.CurtainFragment"
+        android:name="zhuoning.youthlife.cn.zhuoning.device_controller.CurtainFragment"
         android:layout_width="120dp"
         android:layout_height="match_parent"
         android:layout_gravity="right"

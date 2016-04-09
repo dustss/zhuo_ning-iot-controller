@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ring="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#59C8FA">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="连接卓宁智能窗帘"
+        android:textColor="#ffffff"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/aicon_curtain"/>
+
+    <zhuoning.youthlife.cn.zhuoning.widget.TextRing
+        android:id="@+id/curtain_yes"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/imageView5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp"
+
+        ring:circle_color="#59C8FA"
+        ring:circle_radius="40dp"
+        ring:ring_color="#ffffff"
+        ring:start_angle="0"
+
+        ring:stroke_width="1dp"
+        ring:sweep_angle="360"
+        ring:text="是"
+        ring:text_color="#ffffff"
+        ring:text_size="20sp"/>
+
+    <zhuoning.youthlife.cn.zhuoning.widget.TextRing
+        android:id="@+id/curtain_no"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_above="@+id/imageView5"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginBottom="37dp"
+        ring:circle_color="#59C8FA"
+        ring:circle_radius="40dp"
+        ring:ring_color="#ffffff"
+        ring:start_angle="0"
+        ring:stroke_width="1dp"
+
+
+        ring:sweep_angle="360"
+        ring:text="否"
+        ring:text_color="#ffffff"
+        ring:text_size="20sp"/>
+
+</RelativeLayout>

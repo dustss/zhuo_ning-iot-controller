@@ -23,7 +23,6 @@
             android:orientation="horizontal" >
 
             <LinearLayout
-                android:id="@+id/ll_chat_small"
                 android:layout_width="42dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -52,7 +51,6 @@
             android:gravity="center" >
 
             <LinearLayout
-                android:id="@+id/ll_find_small"
                 android:layout_width="42dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -83,7 +81,6 @@
             android:visibility="visible">
 
             <LinearLayout
-                android:id="@+id/ll_me_small"
                 android:layout_width="42dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"

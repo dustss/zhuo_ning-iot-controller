@@ -3,23 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <include
-        android:id="@+id/include_actionbar"
-        layout="@layout/layout_actionbar" />
+    <include layout="@layout/layout_actionbar" />
 
     <TextView
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="3dp"
-        android:layout_marginLeft="5dp"
-        android:textSize="10sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="选择您要连接的设备"/>
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:text="选择您要连接的设备"
+        android:textSize="10sp"/>
 
     <ListView
         android:id="@+id/prelist"
-        android:background="#FFF"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="#FFF"/>
 
 </LinearLayout>

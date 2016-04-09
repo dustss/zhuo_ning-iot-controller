@@ -1,47 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:weightSum="10"
-android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:weightSum="10"
     >
 
     <TextView
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="1"
+    android:background="#25AE77"
     android:gravity="center"
     android:text="问题反馈"
-        android:background="#25AE77"
         android:textColor="@color/white"
     />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:gravity="center|left"
-        android:text="您的问题或者建议:"
         android:layout_weight="1"
+        android:gravity="center|left"
         android:paddingLeft="20dp"
+        android:text="您的问题或者建议:"
         android:textColor="@color/black"
         />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="10dp"
         android:layout_weight="5"
         android:padding="10dp"
-android:layout_margin="10dp"
         />
 
     <Button
         android:layout_width="184dp"
         android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
         android:layout_weight="2"
-    android:text="点击发送"
-        android:textColor="@color/white"
         android:background="@drawable/feedback_send_button"
-        android:layout_gravity="center_horizontal" />
+        android:text="点击发送"
+        android:textColor="@color/white"/>
 
 
 </LinearLayout>

@@ -34,23 +34,19 @@
 
     </RelativeLayout>
 
-
+<!--这个布局有问题-->
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4"
-        android:background="@drawable/light_background"
         >
-        <TextView
-            android:id="@+id/light_state_info_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="开关信息"
-            android:textColor="#ffffff"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            />
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/aicon_light"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -61,47 +57,46 @@
         <!--android:progressDrawable="@drawable/light_pixer_color2"-->
         <!--android:progressDrawable="@drawable/shap_process_color"-->
         <SeekBar
+            android:id="@+id/seekBar"
             android:layout_width="300dp"
             android:layout_height="40dp"
-            android:id="@+id/seekBar"
+            android:layout_above="@+id/textView9"
+            android:layout_centerHorizontal="true"
             android:indeterminate="false"
             android:max="100"
-            android:progressDrawable="@drawable/light_pixer_sedu"
-            android:thumb="@drawable/shape_process_thumb"
             android:progress="70"
-            android:layout_above="@+id/textView9"
-            android:layout_centerHorizontal="true"/>
+            android:progressDrawable="@drawable/light_pixer_sedu"
+            android:thumb="@drawable/shape_process_thumb"/>
 
         <TextView
             android:layout_width="200dp"
             android:layout_height="40dp"
-            android:text="灯色调节"
-            android:id="@+id/textView10"
+
             android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/seekBar2"
             android:layout_alignStart="@+id/seekBar2"
-            android:layout_marginBottom="29dp"/>
+            android:layout_marginBottom="29dp"
+            android:text="灯色调节"/>
 
         <SeekBar
+            android:id="@+id/seekBar2"
             android:layout_width="300dp"
             android:layout_height="40dp"
-            android:id="@+id/seekBar2"
-            android:progressDrawable="@drawable/shap_process_grey"
-            android:thumb="@drawable/shape_process_thumb"
-            android:progress="20"
+
             android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/textView9"
             android:layout_alignStart="@+id/textView9"
-            android:layout_marginBottom="87dp"/>
+            android:layout_marginBottom="87dp"
+            android:progress="20"
+            android:progressDrawable="@drawable/shap_process_grey"
+            android:thumb="@drawable/shape_process_thumb"/>
         <TextView
+            android:id="@+id/textView9"
             android:layout_width="200dp"
             android:layout_height="40dp"
-            android:text="色度调节"
-            android:id="@+id/textView9"
-            android:layout_marginTop="10dp"
             android:layout_above="@+id/seekBar2"
-            android:layout_alignLeft="@+id/seekBar"
-            android:layout_alignStart="@+id/seekBar"/>
+
+            android:layout_alignStart="@+id/seekBar"
+            android:layout_marginTop="10dp"
+            android:text="色度调节"/>
 
     </RelativeLayout>
 
@@ -118,64 +113,63 @@
             android:id="@+id/light_on_off"
             android:layout_width="102dp"
             android:layout_height="43dp"
-            android:src="@drawable/light_toggle_off"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
+            android:layout_above="@+id/textView8"
+
             android:layout_alignParentStart="true"
-            android:layout_marginLeft="18dp"
+            android:layout_alignParentTop="true"
+
             android:layout_marginStart="18dp"
-            android:layout_above="@+id/textView8"/>
+            android:src="@drawable/light_toggle_off"/>
 
 
 
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/light_delay_time"
-            android:layout_marginRight="45dp"
-            android:layout_marginEnd="45dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
             android:id="@+id/imageView6"
-            android:layout_above="@+id/textView6"/>
-
-        <ImageView
-            android:id="@+id/imageView2"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/light_set_time"
+            android:layout_above="@+id/textView6"
+            android:layout_alignParentEnd="true"
+
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="45dp"
+
+            android:src="@drawable/light_delay_time"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView7"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_above="@+id/textView7"/>
+            android:src="@drawable/light_set_time"/>
 
         <TextView
-            android:text="开关"
+            android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignRight="@+id/light_on_off"
             android:layout_alignEnd="@+id/light_on_off"
-            android:layout_marginRight="36dp"
+            android:layout_alignParentBottom="true"
+
             android:layout_marginEnd="36dp"
-            android:id="@+id/textView8"/>
+
+            android:text="开关"/>
         <TextView
-            android:text="定时"
+            android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:id="@+id/textView7"/>
+            android:text="定时"/>
         <TextView
-            android:text="延时"
+            android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignRight="@+id/imageView6"
             android:layout_alignEnd="@+id/imageView6"
-            android:layout_marginRight="14dp"
+            android:layout_alignParentBottom="true"
+
             android:layout_marginEnd="14dp"
-            android:id="@+id/textView6"/>
+
+            android:text="延时"/>
 
     </RelativeLayout>
 

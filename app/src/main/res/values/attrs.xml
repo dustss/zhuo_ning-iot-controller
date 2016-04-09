@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--圆环的基础属性-->
+    <declare-styleable name="Ring">
+        <!-- size-->
+        <attr name="circle_radius" format="dimension"/>
+        <attr name="stroke_width" format="dimension"/>
+        <!-- color-->
+        <attr name="circle_color" format="color"/>
+        <attr name="ring_color" format="color"/>
+        <!-- angle-->
+        <attr name="start_angle" format="float"/>
+        <attr name="sweep_angle" format="float"/>
+    </declare-styleable>
+
+    <!-- TextRing -->
+    <declare-styleable name="TextRing">
+        <attr name="text" format="string"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="text_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="reset_button">
+        <attr name="point_radius" format="dimension"/>
+    </declare-styleable>
+</resources>
