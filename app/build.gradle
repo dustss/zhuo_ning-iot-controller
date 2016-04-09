@@ -6,7 +6,8 @@ apply plugin: 'me.tatarka.retrolambda'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
-
+//19---->android 4.4
+//23---->android 6.0
     defaultConfig {
         applicationId "zhuoning.youthlife.cn.zhuoning"
         minSdkVersion 19

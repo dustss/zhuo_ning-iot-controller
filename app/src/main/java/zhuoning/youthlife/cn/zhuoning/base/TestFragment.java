@@ -136,7 +136,7 @@ public class TestFragment extends Fragment {
             case R.id.GetDeviceInfo:
 
                 params = new RequestParams();
-                params.add(RequestKey.GetDeviceInfo.DEVICE_ID, mDeviceList.getInfo().get(0).getID().toString());
+                params.add(RequestKey.GetDeviceInfo.DEVICE_ID, mDeviceList.getInfo().get(0).getID());
                 mClient.post(URL.DEVICE_INFO_GET, params, new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {

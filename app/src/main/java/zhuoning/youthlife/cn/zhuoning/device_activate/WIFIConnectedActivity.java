@@ -170,8 +170,7 @@ public class WIFIConnectedActivity extends Activity implements OnClickListener {
 				mEsptouchTask = new EsptouchTask(apSsid, apBssid, apPassword,
 						isSsidHidden, WIFIConnectedActivity.this);
 			}
-			IEsptouchResult result = mEsptouchTask.executeForResult();
-			return result;
+			return mEsptouchTask.executeForResult();
 		}
 
 		@Override

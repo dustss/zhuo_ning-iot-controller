@@ -44,8 +44,6 @@ public class Ring extends View {
     private Paint mCirclePaint;
     private Paint mRingPaint;
 
-    private int mXCenter;
-    private int mYCenter;
     private float mRingRadius;
     private RectF mRecf;
 
@@ -127,14 +125,14 @@ public class Ring extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        mXCenter = getWidth() / 2;                      //只能在onDraw阶段获取宽高。
-        mYCenter = getHeight() / 2;
-        mRecf.left = (mXCenter - mRingRadius);
-        mRecf.top = (mYCenter - mRingRadius);
-        mRecf.right = mRingRadius * 2 + (mXCenter - mRingRadius);
-        mRecf.bottom = mRingRadius * 2 + (mYCenter - mRingRadius);
+        int x = getWidth() / 2;
+        int y = getHeight() / 2;
+        mRecf.left = (x - mRingRadius);
+        mRecf.top = (y - mRingRadius);
+        mRecf.right = mRingRadius * 2 + (x - mRingRadius);
+        mRecf.bottom = mRingRadius * 2 + (y - mRingRadius);
 
-        canvas.drawCircle(mXCenter, mYCenter, mCircleRadius, mCirclePaint);
+        canvas.drawCircle(x, y, mCircleRadius, mCirclePaint);
         canvas.drawArc(mRecf, mStartAngle, mSweepAngle, false, mRingPaint);
     }
 }
