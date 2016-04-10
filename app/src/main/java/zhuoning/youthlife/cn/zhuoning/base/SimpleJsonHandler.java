@@ -26,7 +26,7 @@ public class SimpleJsonHandler extends JsonHttpResponseHandler {
     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
         try {
             if (response.getBoolean(ResponseKey.STATUS)) {
-                Toast.makeText(mContext, "简直"+"操作成功", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "简直了，"+"操作成功", Toast.LENGTH_SHORT).show();
             }else
             {
                 Toast.makeText(mContext, "操作失败", Toast.LENGTH_SHORT).show();

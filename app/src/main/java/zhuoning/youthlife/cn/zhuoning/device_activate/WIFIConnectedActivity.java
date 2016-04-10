@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -18,22 +19,31 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.RequestParams;
+
+import org.json.JSONObject;
+
 import java.util.List;
 
+import cz.msebera.android.httpclient.Header;
 import zhuoning.youthlife.cn.zhuoning.R;
+import zhuoning.youthlife.cn.zhuoning.base.SimpleJsonHandler;
 import zhuoning.youthlife.cn.zhuoning.esptouch_wifi.EsptouchTask;
 import zhuoning.youthlife.cn.zhuoning.esptouch_wifi.IEsptouchListener;
 import zhuoning.youthlife.cn.zhuoning.esptouch_wifi.IEsptouchResult;
 import zhuoning.youthlife.cn.zhuoning.esptouch_wifi.IEsptouchTask;
 import zhuoning.youthlife.cn.zhuoning.esptouch_wifi.wifi_admin.EspWifiAdminSimple;
 import zhuoning.youthlife.cn.zhuoning.esptouch_wifi.task.__IEsptouchTask;
+import zhuoning.youthlife.cn.zhuoning.vo.RequestKey;
+import zhuoning.youthlife.cn.zhuoning.vo.URL;
 
 public class WIFIConnectedActivity extends Activity implements OnClickListener {
 
-	private static final String TAG = "EsptouchDemoActivity";
-
+	private static final String TAG = "WIFIConnectedActivity";
+//text view to show  ssid
 	private TextView mTvApSsid;
-
+//edit text to input password
 	private EditText mEdtApPassword;
 
 	private Button mBtnConfirm;
@@ -43,6 +53,13 @@ public class WIFIConnectedActivity extends Activity implements OnClickListener {
 	private EspWifiAdminSimple mWifiAdmin;
 	
 	private Spinner mSpinnerTaskCount;
+/*
+*		The BSSID is a 48bit identity used to identify a particular BSS (Basic Service Set)
+* within an area.
+* 		In Infrastructure BSS networks, the BSSID is the MAC (Medium Access Control)
+* address of the AP (Access Point)
+* */
+	private String mBSSID;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -146,11 +163,8 @@ public class WIFIConnectedActivity extends Activity implements OnClickListener {
 				}
 			});
 			mProgressDialog.setButton(DialogInterface.BUTTON_POSITIVE,
-					"Waiting...", new DialogInterface.OnClickListener() {
-						@Override
-						public void onClick(DialogInterface dialog, int which) {
-						}
-					});
+					"Waiting...", (dialog, which) -> {
+                    });
 			mProgressDialog.show();
 			mProgressDialog.getButton(DialogInterface.BUTTON_POSITIVE)
 					.setEnabled(false);
@@ -177,13 +191,16 @@ public class WIFIConnectedActivity extends Activity implements OnClickListener {
 		protected void onPostExecute(IEsptouchResult result) {
 			mProgressDialog.getButton(DialogInterface.BUTTON_POSITIVE)
 					.setEnabled(true);
-			mProgressDialog.getButton(DialogInterface.BUTTON_POSITIVE).setText(
-					"Confirm");
+			mProgressDialog.setButton(DialogInterface.BUTTON_POSITIVE,"确定激活",(dialog, which) -> {
+				//发送激活设备的指令
+				sendActivateDeviceCmd();
+			});
 			// it is unnecessary at the moment, add here just to show how to use isCancelled()
 			if (!result.isCancelled()) {
 				if (result.isSuc()) {
+					mBSSID = result.getBssid();
 					mProgressDialog.setMessage("Esptouch success, bssid = "
-							+ result.getBssid() + ",InetAddress = "
+							+ mBSSID + ",InetAddress = "
 							+ result.getInetAddress().getHostAddress());
 				} else {
 					mProgressDialog.setMessage("Esptouch fail");
@@ -191,7 +208,28 @@ public class WIFIConnectedActivity extends Activity implements OnClickListener {
 			}
 		}
 	}
-	
+
+	private void sendActivateDeviceCmd() {
+		AsyncHttpClient client = new AsyncHttpClient();
+		RequestParams params = new RequestParams();
+		params.add(RequestKey.DeviceActivated.DEVICE_SN, mBSSID);          //  change to mac id
+		params.add(RequestKey.DeviceActivated.DEVICE_NAME, "我卓的设备");
+		params.add(RequestKey.DeviceActivated.DEVICE_TYPE, "2");
+		client.post(URL.DEVICE_ACTIVATE, params, new SimpleJsonHandler(WIFIConnectedActivity.this){
+			@Override
+			public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+				super.onSuccess(statusCode, headers, response);
+				startActivity(new Intent(WIFIConnectedActivity.this,ConnectSucceedActivity.class));
+			}
+
+			@Override
+			public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+				super.onFailure(statusCode, headers, responseString, throwable);
+				startActivity(new Intent(WIFIConnectedActivity.this,ConnectFailActivity.class));
+			}
+		});
+	}
+
 	private void onEsptoucResultAddedPerform(final IEsptouchResult result) {
 		runOnUiThread(new Runnable() {
 

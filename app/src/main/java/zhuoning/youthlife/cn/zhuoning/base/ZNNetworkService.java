@@ -12,13 +12,13 @@ import zhuoning.youthlife.cn.zhuoning.vo.URL;
  * Created by dusts on 2016/4/7.
  */
 
-public class SendCommandSerivce {
+public class ZNNetworkService {
     private AsyncHttpClient mAsyncHttpClient;
     private RequestParams mParams;
     private Context mContext;
 //    private boolean mResult;
 
-    public SendCommandSerivce(Context context) {
+    public ZNNetworkService(Context context) {
         mContext = context;
         mAsyncHttpClient=new AsyncHttpClient();
         mParams = new RequestParams();
@@ -34,5 +34,6 @@ public class SendCommandSerivce {
         mParams.add(RequestKey.SendCmdToDevice.TIMESTAMP, timestamp);
         mAsyncHttpClient.post(URL.DEVICE_SEND_CMD, mParams, new SimpleJsonHandler(mContext));
     }
+
 
 }

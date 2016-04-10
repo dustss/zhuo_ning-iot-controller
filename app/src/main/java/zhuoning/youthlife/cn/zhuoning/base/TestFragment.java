@@ -110,7 +110,7 @@ public class TestFragment extends Fragment {
             case R.id.DeviceActivated:
 
                 params = new RequestParams();
-                params.add(RequestKey.DeviceActivated.DEVICE_SN, "fuck");          //  change to mac id
+                params.add(RequestKey.DeviceActivated.DEVICE_SN, "5ccf7f05e570");          //  change to mac id
                 params.add(RequestKey.DeviceActivated.DEVICE_NAME, "littlekali");
                 params.add(RequestKey.DeviceActivated.DEVICE_TYPE, "2");
                 mClient.post(URL.DEVICE_ACTIVATE, params, new SimpleJsonHandler(getActivity()));
