@@ -73,6 +73,7 @@ public class TestFragment extends Fragment {
 *  根据list中的设备类型，刷新 listview视图 ,这里可能考虑使用pull to refresh list
 *  然后为  list 中的item 设置 相应设备类型的点击事件  发送相应的请求  反馈操作结果即可
 *  在智能插座上的操作，也是类似的。
+*  getDeviceList
 *
 *  还有一些小问题，比如定时 延时的时间设置 弹出窗口，智能照明的颜色捕捉
 *
