@@ -16,7 +16,6 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.PersistentCookieStore;
 import com.loopj.android.http.RequestParams;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import butterknife.Bind;
@@ -24,12 +23,15 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cz.msebera.android.httpclient.Header;
 import zhuoning.youthlife.cn.zhuoning.R;
-import zhuoning.youthlife.cn.zhuoning.vo.JsonResponse.ActivateDevice;
+import zhuoning.youthlife.cn.zhuoning.utils.network.SimpleJsonHandler;
+import zhuoning.youthlife.cn.zhuoning.vo.DeviceType;
 import zhuoning.youthlife.cn.zhuoning.vo.JsonResponse.GetDeviceList;
 import zhuoning.youthlife.cn.zhuoning.vo.JsonResponse.GetDevieceInfo;
 import zhuoning.youthlife.cn.zhuoning.vo.RequestKey;
-import zhuoning.youthlife.cn.zhuoning.vo.ResponseKey;
 import zhuoning.youthlife.cn.zhuoning.vo.URL;
+
+import static zhuoning.youthlife.cn.zhuoning.utils.network.RequestFunc.pActivateDevice;
+import static zhuoning.youthlife.cn.zhuoning.utils.network.RequestFunc.pGetDeviceInfo;
 
 /**
  *
@@ -102,24 +104,16 @@ public class TestFragment extends Fragment {
         RequestParams params = null;
         switch (view.getId()) {
             case R.id.Register:
-
-
                 break;
             case R.id.Login:
                 break;
             case R.id.DeviceActivated:
-
-                params = new RequestParams();
-                params.add(RequestKey.DeviceActivated.DEVICE_SN, "5ccf7f05e570");          //  change to mac id
-                params.add(RequestKey.DeviceActivated.DEVICE_NAME, "littlekali");
-                params.add(RequestKey.DeviceActivated.DEVICE_TYPE, "2");
+                params = pActivateDevice("5ccf7f05e570", "littlekali", DeviceType.PLUG);
                 mClient.post(URL.DEVICE_ACTIVATE, params, new SimpleJsonHandler(getActivity()));
                 break;
             case R.id.GetDeviceList:
 
-                mClient.get(URL.DEVICE_LIST_GET,
-
-                new JsonHttpResponseHandler() {
+                mClient.get(URL.DEVICE_LIST_GET, new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
 
@@ -135,8 +129,12 @@ public class TestFragment extends Fragment {
 
             case R.id.GetDeviceInfo:
 
-                params = new RequestParams();
-                params.add(RequestKey.GetDeviceInfo.DEVICE_ID, mDeviceList.getInfo().get(0).getID());
+                String deviceId = mDeviceList.getInfo().get(0).getID();
+                if (deviceId.isEmpty()) {
+                    Toast.makeText(getActivity(), "参数错误，id为空", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                params = pGetDeviceInfo(deviceId);
                 mClient.post(URL.DEVICE_INFO_GET, params, new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
@@ -147,8 +145,6 @@ public class TestFragment extends Fragment {
                             if (getDevieceInfo.getInfo().get(0)!=null)
                             Toast.makeText(getActivity(), "获取json对象成功" + getDevieceInfo.getInfo().get(0).getExecDTFormat(), Toast.LENGTH_SHORT).show();
                         }
-
-
                     }
                 });
 

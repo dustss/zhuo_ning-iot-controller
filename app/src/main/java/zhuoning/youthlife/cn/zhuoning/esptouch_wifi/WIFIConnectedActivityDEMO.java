@@ -1,9 +1,8 @@
-package zhuoning.youthlife.cn.zhuoning.device_activate;
+package zhuoning.youthlife.cn.zhuoning.esptouch_wifi;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -28,36 +27,35 @@ import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
 import zhuoning.youthlife.cn.zhuoning.R;
-import zhuoning.youthlife.cn.zhuoning.base.SimpleJsonHandler;
-import zhuoning.youthlife.cn.zhuoning.esptouch_wifi.EsptouchTask;
-import zhuoning.youthlife.cn.zhuoning.esptouch_wifi.IEsptouchListener;
-import zhuoning.youthlife.cn.zhuoning.esptouch_wifi.IEsptouchResult;
-import zhuoning.youthlife.cn.zhuoning.esptouch_wifi.IEsptouchTask;
-import zhuoning.youthlife.cn.zhuoning.esptouch_wifi.wifi_admin.EspWifiAdminSimple;
+import zhuoning.youthlife.cn.zhuoning.device_activate.result.ConnectFailActivity;
+import zhuoning.youthlife.cn.zhuoning.device_activate.result.ConnectSucceedActivity;
 import zhuoning.youthlife.cn.zhuoning.esptouch_wifi.task.__IEsptouchTask;
+import zhuoning.youthlife.cn.zhuoning.esptouch_wifi.wifi_admin.EspWifiAdminSimple;
+import zhuoning.youthlife.cn.zhuoning.utils.network.SimpleJsonHandler;
 import zhuoning.youthlife.cn.zhuoning.vo.RequestKey;
 import zhuoning.youthlife.cn.zhuoning.vo.URL;
 
-public class WIFIConnectedActivity extends Activity implements OnClickListener {
+public class WIFIConnectedActivityDEMO extends Activity implements OnClickListener {
 
-	private static final String TAG = "WIFIConnectedActivity";
+	private static final String TAG = "WIFIConnected...";
 //text view to show  ssid
-	private TextView mTvApSsid;
+	private TextView mWifiSSIDTextView;
 //edit text to input password
-	private EditText mEdtApPassword;
+	private EditText mWifiPasswordEditText;
 
-	private Button mBtnConfirm;
-	
+	private Button mShareWifiButton;
+
 	private Switch mSwitchIsSsidHidden;
 
 	private EspWifiAdminSimple mWifiAdmin;
-	
+
 	private Spinner mSpinnerTaskCount;
 /*
-*		The BSSID is a 48bit identity used to identify a particular BSS (Basic Service Set)
+* 		The BSSID is a 48bit identity used to identify a particular BSS (Basic Service Set)
 * within an area.
 * 		In Infrastructure BSS networks, the BSSID is the MAC (Medium Access Control)
 * address of the AP (Access Point)
+*
 * */
 	private String mBSSID;
 
@@ -67,11 +65,11 @@ public class WIFIConnectedActivity extends Activity implements OnClickListener {
 		setContentView(R.layout.activity_share_wifi);
 
 		mWifiAdmin = new EspWifiAdminSimple(this);
-		mTvApSsid = (TextView) findViewById(R.id.tvApSssidConnected);
-		mEdtApPassword = (EditText) findViewById(R.id.edtApPassword);
-		mBtnConfirm = (Button) findViewById(R.id.btnConfirm);
+		mWifiSSIDTextView = (TextView) findViewById(R.id.tvApSssidConnected);
+		mWifiPasswordEditText = (EditText) findViewById(R.id.edtApPassword);
+		mShareWifiButton = (Button) findViewById(R.id.btnConfirm);
 		mSwitchIsSsidHidden = (Switch) findViewById(R.id.switchIsSsidHidden);
-		mBtnConfirm.setOnClickListener(this);
+		mShareWifiButton.setOnClickListener(this);
 		initSpinner();
 	}
 	
@@ -97,21 +95,21 @@ public class WIFIConnectedActivity extends Activity implements OnClickListener {
 		// display the connected ap's ssid
 		String apSsid = mWifiAdmin.getWifiConnectedSsid();
 		if (apSsid != null) {
-			mTvApSsid.setText(apSsid);
+			mWifiSSIDTextView.setText(apSsid);
 		} else {
-			mTvApSsid.setText("");
+			mWifiSSIDTextView.setText("");
 		}
 		// check whether the wifi is connected
 		boolean isApSsidEmpty = TextUtils.isEmpty(apSsid);
-		mBtnConfirm.setEnabled(!isApSsidEmpty);
+		mShareWifiButton.setEnabled(!isApSsidEmpty);
 	}
 
 	@Override
 	public void onClick(View v) {
 
-		if (v == mBtnConfirm) {
-			String apSsid = mTvApSsid.getText().toString();
-			String apPassword = mEdtApPassword.getText().toString();
+		if (v == mShareWifiButton) {
+			String apSsid = mWifiSSIDTextView.getText().toString();
+			String apPassword = mWifiPasswordEditText.getText().toString();
 			String apBssid = mWifiAdmin.getWifiConnectedBssid();
 			Boolean isSsidHidden = mSwitchIsSsidHidden.isChecked();
 			String isSsidHiddenStr = "NO";
@@ -122,8 +120,8 @@ public class WIFIConnectedActivity extends Activity implements OnClickListener {
 				isSsidHiddenStr = "YES";
 			}
 			if (__IEsptouchTask.DEBUG) {
-				Log.d(TAG, "mBtnConfirm is clicked, mEdtApSsid = " + apSsid
-						+ ", " + " mEdtApPassword = " + apPassword);
+				Log.d(TAG, "ShareWifi Button is clicked, SSID = " + apSsid
+						+ ", " + " PASSWORD = " + apPassword);
 			}
 			new EsptouchAsyncTask3().execute(apSsid, apBssid, apPassword,
 					isSsidHiddenStr, taskResultCountStr);
@@ -145,23 +143,20 @@ public class WIFIConnectedActivity extends Activity implements OnClickListener {
 
 		@Override
 		protected void onPreExecute() {
-			mProgressDialog = new ProgressDialog(WIFIConnectedActivity.this);
+			mProgressDialog = new ProgressDialog(WIFIConnectedActivityDEMO.this);
 			mProgressDialog
 					.setMessage("Esptouch is configuring, please wait for a moment...");
 			mProgressDialog.setCanceledOnTouchOutside(false);
-			mProgressDialog.setOnCancelListener(new OnCancelListener() {
-				@Override
-				public void onCancel(DialogInterface dialog) {
-					synchronized (mLock) {
-						if (__IEsptouchTask.DEBUG) {
-							Log.i(TAG, "progress dialog is canceled");
-						}
-						if (mEsptouchTask != null) {
-							mEsptouchTask.interrupt();
-						}
-					}
-				}
-			});
+			mProgressDialog.setOnCancelListener(dialog -> {
+                synchronized (mLock) {
+                    if (__IEsptouchTask.DEBUG) {
+                        Log.i(TAG, "progress dialog is canceled");
+                    }
+                    if (mEsptouchTask != null) {
+                        mEsptouchTask.interrupt();
+                    }
+                }
+            });
 			mProgressDialog.setButton(DialogInterface.BUTTON_POSITIVE,
 					"Waiting...", (dialog, which) -> {
                     });
@@ -182,7 +177,7 @@ public class WIFIConnectedActivity extends Activity implements OnClickListener {
 					isSsidHidden = true;
 				}
 				mEsptouchTask = new EsptouchTask(apSsid, apBssid, apPassword,
-						isSsidHidden, WIFIConnectedActivity.this);
+						isSsidHidden, WIFIConnectedActivityDEMO.this);
 			}
 			return mEsptouchTask.executeForResult();
 		}
@@ -215,41 +210,30 @@ public class WIFIConnectedActivity extends Activity implements OnClickListener {
 		params.add(RequestKey.DeviceActivated.DEVICE_SN, mBSSID);          //  change to mac id
 		params.add(RequestKey.DeviceActivated.DEVICE_NAME, "我卓的设备");
 		params.add(RequestKey.DeviceActivated.DEVICE_TYPE, "2");
-		client.post(URL.DEVICE_ACTIVATE, params, new SimpleJsonHandler(WIFIConnectedActivity.this){
+		client.post(URL.DEVICE_ACTIVATE, params, new SimpleJsonHandler(WIFIConnectedActivityDEMO.this){
 			@Override
 			public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
 				super.onSuccess(statusCode, headers, response);
-				startActivity(new Intent(WIFIConnectedActivity.this,ConnectSucceedActivity.class));
+				startActivity(new Intent(WIFIConnectedActivityDEMO.this,ConnectSucceedActivity.class));
 			}
 
 			@Override
 			public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
 				super.onFailure(statusCode, headers, responseString, throwable);
-				startActivity(new Intent(WIFIConnectedActivity.this,ConnectFailActivity.class));
+				startActivity(new Intent(WIFIConnectedActivityDEMO.this,ConnectFailActivity.class));
 			}
 		});
 	}
 
 	private void onEsptoucResultAddedPerform(final IEsptouchResult result) {
-		runOnUiThread(new Runnable() {
-
-			@Override
-			public void run() {
-				String text = result.getBssid() + " is connected to the wifi";
-				Toast.makeText(WIFIConnectedActivity.this, text,
-						Toast.LENGTH_LONG).show();
-			}
-
-		});
+		runOnUiThread(() -> {
+            String text = result.getBssid() + " is connected to the wifi";
+            Toast.makeText(WIFIConnectedActivityDEMO.this, text,
+                    Toast.LENGTH_LONG).show();
+        });
 	}
 
-	private IEsptouchListener myListener = new IEsptouchListener() {
-
-		@Override
-		public void onEsptouchResultAdded(final IEsptouchResult result) {
-			onEsptoucResultAddedPerform(result);
-		}
-	};
+	private IEsptouchListener myListener = this::onEsptoucResultAddedPerform;
 	
 	private class EsptouchAsyncTask3 extends AsyncTask<String, Void, List<IEsptouchResult>> {
 
@@ -266,29 +250,23 @@ public class WIFIConnectedActivity extends Activity implements OnClickListener {
 
 		@Override
 		protected void onPreExecute() {
-			mProgressDialog = new ProgressDialog(WIFIConnectedActivity.this);
+			mProgressDialog = new ProgressDialog(WIFIConnectedActivityDEMO.this);
 			mProgressDialog
 					.setMessage("Esptouch is configuring, please wait for a moment...");
 			mProgressDialog.setCanceledOnTouchOutside(false);
-			mProgressDialog.setOnCancelListener(new OnCancelListener() {
-				@Override
-				public void onCancel(DialogInterface dialog) {
-					synchronized (mLock) {
-						if (__IEsptouchTask.DEBUG) {
-							Log.i(TAG, "progress dialog is canceled");
-						}
-						if (mEsptouchTask != null) {
-							mEsptouchTask.interrupt();
-						}
-					}
-				}
-			});
+			mProgressDialog.setOnCancelListener(dialog -> {
+                synchronized (mLock) {
+                    if (__IEsptouchTask.DEBUG) {
+                        Log.i(TAG, "progress dialog is canceled");
+                    }
+                    if (mEsptouchTask != null) {
+                        mEsptouchTask.interrupt();
+                    }
+                }
+            });
 			mProgressDialog.setButton(DialogInterface.BUTTON_POSITIVE,
-					"Waiting...", new DialogInterface.OnClickListener() {
-						@Override
-						public void onClick(DialogInterface dialog, int which) {
-						}
-					});
+					"Waiting...", (dialog, which) -> {
+                    });
 			mProgressDialog.show();
 			mProgressDialog.getButton(DialogInterface.BUTTON_POSITIVE)
 					.setEnabled(false);
@@ -309,7 +287,7 @@ public class WIFIConnectedActivity extends Activity implements OnClickListener {
 				}
 				taskResultCount = Integer.parseInt(taskResultCountStr);
 				mEsptouchTask = new EsptouchTask(apSsid, apBssid, apPassword,
-						isSsidHidden, WIFIConnectedActivity.this);
+						isSsidHidden, WIFIConnectedActivityDEMO.this);
 				mEsptouchTask.setEsptouchListener(myListener);
 			}
 			List<IEsptouchResult> resultList = mEsptouchTask.executeForResults(taskResultCount);

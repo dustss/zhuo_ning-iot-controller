@@ -1,4 +1,4 @@
-package zhuoning.youthlife.cn.zhuoning.device_activate;
+package zhuoning.youthlife.cn.zhuoning.device_activate.device;
 
 
 import android.app.Activity;
@@ -10,6 +10,8 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import zhuoning.youthlife.cn.zhuoning.R;
+import zhuoning.youthlife.cn.zhuoning.device_activate.ShareWifiActivity;
+import zhuoning.youthlife.cn.zhuoning.vo.DeviceType;
 import zhuoning.youthlife.cn.zhuoning.widget.TextRing;
 
 /**
@@ -35,10 +37,10 @@ public class CurtainActivateActivity extends Activity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.curtain_no:
-
+                finish();
                 break;
             case R.id.curtain_yes:
-                startActivity(new Intent(this, WIFIConnectedActivity.class));
+                startActivity(new Intent(this, ShareWifiActivity.class).putExtra("DeviceType", DeviceType.CURTAIN));
                 break;
         }
     }

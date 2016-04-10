@@ -84,27 +84,37 @@
 
         <!-- 激活页面 -->
         <activity
-            android:name=".device_activate.LightActivateActivity"
+            android:name=".device_activate.device.LightActivateActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity
-            android:name=".device_activate.PlugActivateActivity"
+            android:name=".device_activate.device.PlugActivateActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity
-            android:name=".device_activate.DrinkActivateActivity"
+            android:name=".device_activate.device.DrinkActivateActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity
-            android:name=".device_activate.CurtainActivateActivity"
+            android:name=".device_activate.device.CurtainActivateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+
+        <!--activate device-->
+        <activity
+            android:name=".device_activate.result.ConnectSucceedActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity
-            android:name=".device_activate.WIFIConnectedActivity"
+            android:name=".device_activate.result.ConnectFailActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-        <activity android:name=".device_activate.ConnectSucceedActivity" />
-        <activity android:name=".device_activate.ConnectFailActivity"></activity>
+        <activity
+            android:name=".device_activate.ShareWifiActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
     </application>
 
 </manifest>
