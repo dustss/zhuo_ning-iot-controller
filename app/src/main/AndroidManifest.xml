@@ -31,10 +31,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".device_activate.DMActivateActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".base.BaseActivity"
             android:screenOrientation="portrait"

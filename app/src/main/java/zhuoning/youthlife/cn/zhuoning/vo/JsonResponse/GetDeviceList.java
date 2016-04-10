@@ -13,7 +13,7 @@ public class GetDeviceList {
      */
 
     private boolean status;
-    private List<DeviceInfo> info;
+    private List<Device> info;
 
     public boolean isStatus() {
         return status;
@@ -23,11 +23,11 @@ public class GetDeviceList {
         this.status = status;
     }
 
-    public List<DeviceInfo> getInfo() {
+    public List<Device> getInfo() {
         return info;
     }
 
-    public void setInfo(List<DeviceInfo> info) {
+    public void setInfo(List<Device> info) {
         this.info = info;
     }
 }
