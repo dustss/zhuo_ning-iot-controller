@@ -35,11 +35,11 @@
         <activity
             android:name=".device_activate.DMActivateActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            />
         <activity
             android:name=".base.BaseActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+            />
         <activity
             android:name=".user_login.RegActivity"
             android:screenOrientation="portrait"

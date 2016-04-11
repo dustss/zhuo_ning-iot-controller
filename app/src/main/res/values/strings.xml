@@ -8,4 +8,5 @@
     <string name="spinnerTaskResultCountTitle">Task result count</string>
     <string name="btnConfirmTitle">Confirm</string>
     <string name="connect_success">连接成功</string>
+    <string name="stat_offline">离线</string>
 </resources>
