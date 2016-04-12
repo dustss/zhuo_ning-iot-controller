@@ -114,7 +114,8 @@ public class TestFragment extends Fragment {
                 break;
             case R.id.GetDeviceList:
 
-                mClient.get(URL.DEVICE_LIST_GET, new JsonHttpResponseHandler() {
+                mClient.get(URL.DEVICE_LIST_GET,
+                        new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
 
@@ -125,6 +126,17 @@ public class TestFragment extends Fragment {
                         }
                     }
                 }
+//                        new AsyncHttpResponseHandler() {
+//                            @Override
+//                            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+//
+//                            }
+//
+//                            @Override
+//                            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+//
+//                            }
+//                        }
                 );
                 break;
 
