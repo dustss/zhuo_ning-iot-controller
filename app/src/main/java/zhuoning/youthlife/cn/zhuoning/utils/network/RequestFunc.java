@@ -58,4 +58,11 @@ public class RequestFunc {
         return params;
     }
 
+    public static RequestParams pUpdateDeviceInfo(String DeviceID, String DeviceName) {
+        RequestParams params = new RequestParams();
+        params.put(RequestKey.UpdateDeviceInfo.DEVICE_ID, DeviceID);
+        params.put(RequestKey.UpdateDeviceInfo.DEVICE_NAME, DeviceName);
+        return params;
+    }
+
 }

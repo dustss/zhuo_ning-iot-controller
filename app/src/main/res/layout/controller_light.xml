@@ -34,7 +34,7 @@
 
     </RelativeLayout>
 
-<!--这个布局有问题-->
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -45,7 +45,23 @@
             android:layout_height="110dp"
             android:src="@drawable/aicon_light"
             android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageView6"/>
+
+        <TextView
+            android:text="定时任务:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView6"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView2"/>
+
+        <TextView
+            android:text="延时任务:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_toEndOf="@+id/imageView6"/>
 
     </RelativeLayout>
     <RelativeLayout
@@ -124,7 +140,7 @@
 
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/time_picker"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_above="@+id/textView6"
@@ -136,6 +152,7 @@
             android:src="@drawable/light_delay_time"/>
 
         <ImageView
+            android:id="@+id/date_picker"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_above="@+id/textView7"
@@ -164,7 +181,7 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/imageView6"
+            android:layout_alignEnd="@+id/time_picker"
             android:layout_alignParentBottom="true"
 
             android:layout_marginEnd="14dp"

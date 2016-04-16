@@ -54,4 +54,8 @@ public class RequestKey {
         public static final String DEVICE_ID = "DeviceID";
         public static final String DEVICE_NAME = "DeviceName";
     }
+
+    public static final class Feedback {
+        public static final String CONTENT = "content";
+    }
 }

@@ -148,7 +148,7 @@ public class TestFragment extends Fragment {
                     return;
                 }
                 params = pGetDeviceInfo(deviceId);
-                mClient.post(URL.DEVICE_INFO_GET, params, new JsonHttpResponseHandler() {
+                mClient.post(URL.DEVICE_TASK_GET, params, new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
 

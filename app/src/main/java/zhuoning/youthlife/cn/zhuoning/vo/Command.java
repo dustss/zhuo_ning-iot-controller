@@ -9,9 +9,11 @@ package zhuoning.youthlife.cn.zhuoning.vo;
 
 public class Command {
 
-    public static class Drink{
+    public static class Drink {
         public static final int HOT = 1;
+        public static final int HOT_STOP = 2;
         public static final int COLD = 3;
+        public static final int COLD_STOP = 4;
 
     }
     public static class Plug{
