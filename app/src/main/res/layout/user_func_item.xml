@@ -9,18 +9,17 @@
         android:id="@+id/icon"
         android:layout_width="36dip"
         android:layout_height="36dip"
-        android:layout_alignParentLeft="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/light" />
+        android:layout_alignParentStart="true"
+        android:scaleType="fitXY"/>
 
     <TextView
         android:id="@+id/func_name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginLeft="8.0dip"
+        android:layout_marginStart="8.0dip"
         android:layout_marginTop="2.0dip"
-        android:layout_toRightOf="@+id/icon"
+        android:layout_toEndOf="@+id/icon"
         android:singleLine="true"
         android:text="设备名称"
         android:textColor="#000000"

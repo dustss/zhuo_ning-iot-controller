@@ -41,27 +41,23 @@
         android:layout_weight="4"
         >
         <ImageView
+            android:id="@+id/imageView6"
             android:layout_width="110dp"
             android:layout_height="110dp"
-            android:src="@drawable/aicon_light"
-            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:id="@+id/imageView6"/>
+            android:layout_centerVertical="true"
+            android:src="@drawable/aicon_light"/>
 
         <TextView
-            android:text="定时任务:"
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView6"
             android:layout_alignParentStart="true"
-            android:id="@+id/textView2"/>
+            android:layout_below="@+id/imageView6"
+            android:text="定时任务:"
+            android:textColor="@color/white"
+            android:visibility="invisible"/>
 
-        <TextView
-            android:text="延时任务:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/textView2"
-            android:layout_toEndOf="@+id/imageView6"/>
 
     </RelativeLayout>
     <RelativeLayout

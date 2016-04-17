@@ -10,4 +10,8 @@
     <color name="transparent_25">#40000000</color>
     <color name="grey_green">#6ec493</color>
     <color name="grey_red">#f28a6a</color>
+
+
+    <color name="login_edit_text">#34ffffff</color>
+    <color name="login_hint">#816f6f6f</color>
 </resources>

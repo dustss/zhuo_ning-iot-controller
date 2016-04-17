@@ -12,8 +12,7 @@
         android:layout_width="42dip"
         android:layout_height="42dip"
         android:layout_alignParentLeft="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/light" />
+        android:scaleType="fitXY"/>
     <TextView
         android:id="@+id/dname"
         android:layout_width="match_parent"

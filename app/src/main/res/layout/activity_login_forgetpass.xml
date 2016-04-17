@@ -1,78 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#5ca0a6"
-    android:orientation="vertical"
-    android:weightSum="20"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/shape_login_background"
+              android:orientation="vertical"
+              android:weightSum="35"
     >
 
-
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="7"
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingBottom="32dp"
-        android:paddingTop="56dp"
-        android:text="卓宁小控"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+        android:layout_weight="10">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/zhuoning_logo"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingBottom="32dp"
+            android:paddingTop="56dp"/>
+    </RelativeLayout>
 
     <EditText
         android:id="@+id/register_phone_number"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-        android:background="@color/transparent_25"
+        android:background="@color/login_edit_text"
         android:gravity="center"
-        android:hint="请输入手机号码"
-        android:inputType="phone"
-        android:paddingBottom="12dp"
-        android:paddingTop="12dp"
-        android:textSize="12sp" />
+        android:hint="请输入手机号"
+        android:textColorHint="@color/login_hint"
+        android:textSize="14sp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        />
 
     <EditText
         android:id="@+id/register_verification"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="2dp"
         android:layout_weight="3"
-        android:background="@color/transparent_25"
+        android:background="@color/login_edit_text"
         android:gravity="center"
         android:hint="点击发送验证码"
-        android:inputType="number"
-        android:paddingBottom="12dp"
-        android:paddingTop="12dp"
-        android:textSize="12sp" />
+        android:inputType="textPassword"
+        android:textColorHint="@color/login_hint"
+        android:textSize="14sp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        />
+
 
     <Button
         android:id="@+id/send_verification"
-        android:layout_width="335dp"
+        android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="48dp"
-        android:layout_marginRight="48dp"
-        android:layout_marginTop="36dp"
-        android:layout_weight="3"
-        android:background="@drawable/log_in_button"
-        android:paddingBottom="12dp"
-        android:paddingTop="12dp"
-        android:text="发送验证码" />
-
-
-
+        android:layout_weight="2.5"
+        android:background="@drawable/shape_login_button"
+        android:gravity="center"
+        android:text="发送验证码"/>
 
 
     <TextView
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="36dp"
+        android:layout_weight="4"
+        android:gravity="center"
         android:text="返回登录"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"/>
 
 
 </LinearLayout>

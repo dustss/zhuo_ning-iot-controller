@@ -16,7 +16,7 @@
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/slogo" />
+            android:src="@drawable/zhuoning_logo"/>
         <TextView
             android:id="@+id/login_status"
             android:layout_width="match_parent"

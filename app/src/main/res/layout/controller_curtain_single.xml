@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <android.support.v4.widget.DrawerLayout
-    android:id="@+id/drawer_layout_curtain"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout_curtain"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -54,7 +54,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="115dp"
-                android:background="@drawable/icon_curtain"/>
+                android:background="@drawable/aicon_curtain"/>
 
 
 
