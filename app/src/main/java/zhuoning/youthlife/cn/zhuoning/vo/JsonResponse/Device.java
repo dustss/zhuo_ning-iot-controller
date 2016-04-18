@@ -1,27 +1,26 @@
 package zhuoning.youthlife.cn.zhuoning.vo.JsonResponse;
 
 /**
- * Created by dusts on 2016/4/3.
+ * ID : 6
+ * DName : littlekali
+ * DType : 2   0-3
+ * Stat : 0 离线  1在线
  */
 public class Device {
-    public static final String OFF_LINE = "0";
-    public static final String ON_LINE = "1";
-    /**
-     * ID : 6
-     * DName : littlekali
-     * DType : 2
-     * Stat : 0
-     */
+    public static final int OFF_LINE = 0;
+    public static final int ON_LINE = 1;
+    public static Device DEVICE_DEFAULT = new Device("8888", "default", "8888", "8888");
+
     private String ID;
     private String DName;
     private String DType;
     private String Stat;
 
-    public Device(String ID, String DName, String DType, String stat) {
+    public Device(String ID, String DName, String DType, String Stat) {
         this.ID = ID;
         this.DName = DName;
         this.DType = DType;
-        Stat = stat;
+        this.Stat = Stat;
     }
 
     public String getID() {

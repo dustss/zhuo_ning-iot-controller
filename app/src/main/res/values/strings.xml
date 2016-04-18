@@ -9,4 +9,11 @@
     <string name="btnConfirmTitle">Confirm</string>
     <string name="connect_success">连接成功</string>
     <string name="stat_offline">离线</string>
+    <string name="stat_exception">状态异常</string>
+    <string name="description_logo">zhuoning_logo</string>
+    <string name="status_login">已登录</string>
+    <string name="device_activate">激活设备</string>
+    <string name="wifi_share">与设备共享您的wifi</string>
+    <string name="please_give_pass">请输入您的wifi密码</string>
+    <string name="sure">确定</string>
 </resources>

@@ -16,6 +16,7 @@
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/description_logo"
             android:src="@drawable/zhuoning_logo"/>
         <TextView
             android:id="@+id/login_status"
@@ -24,7 +25,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
             android:gravity="center_horizontal"
-            android:text="已登录"/>
+            android:text="@string/status_login"/>
     </LinearLayout>
 
     <LinearLayout
@@ -38,7 +39,9 @@
         android:id="@+id/functionlist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFF"/>
+        android:layout_margin="10dp"
+        android:background="#FFF"
+        android:padding="30dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
