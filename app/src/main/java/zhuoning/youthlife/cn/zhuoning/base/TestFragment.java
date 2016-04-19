@@ -102,7 +102,7 @@ public class TestFragment extends Fragment {
 
     @OnClick({R.id.Register, R.id.Login, R.id.DeviceActivated, R.id.GetDeviceList, R.id.GetDeviceInfo, R.id.SendCmdToDevice, R.id.SendTimerCmdToDevice, R.id.UnbindDevice, R.id.UpdateDeviceInfo})
     public void onClick(View view) {
-        RequestParams params = null;
+        RequestParams params;
         switch (view.getId()) {
             case R.id.Register:
                 break;
@@ -114,7 +114,7 @@ public class TestFragment extends Fragment {
                 break;
             case R.id.GetDeviceList:
 
-                mClient.get(URL.DEVICE_LIST_GET,
+                mClient.get(URL.GET_DEVICE_LIST,
                         new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {

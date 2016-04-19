@@ -11,13 +11,18 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
 
     <application
+        android:name=".base.ZhuoApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
-        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-        >
+
+        <!--Bug  HD       fir.im-->
+        <meta-data
+            android:name="BUG_HD_SDK_GENERAL_KEY"
+            android:value="9bbf21098cdc6991adbf213c1a36bdab"/>
         <activity
             android:name=".user_login.LoginActivity"
             android:label="@string/app_name"
