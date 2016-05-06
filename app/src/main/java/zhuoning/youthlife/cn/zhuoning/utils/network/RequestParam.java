@@ -6,9 +6,11 @@ import zhuoning.youthlife.cn.zhuoning.vo.RequestKey;
 
 /**
  * Created by dusts on 2016/4/7.
+ *
+ * return RequestParams for complex params
  */
 
-public class RequestFunc {
+public class RequestParam {
 
 
     public static RequestParams pSendCommand(String DeviceId,String Cmd,String Func,String CmdMemo,String timestamp ) {

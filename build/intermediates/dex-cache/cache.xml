@@ -1,3 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.3.0_f8c153366300612a8566b6f4f94bf1ffdf3d08fd.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\exploded-aar\com.baoyz.swipemenulistview\library\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8ec8378e8d7aa3104f60823e6350f2728d3609ba">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\com.baoyz.swipemenulistview-library-1.3.0_62de29902203a80bb613b500e80f0453101d243c.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\butterknife-7.0.1_d461155074196be45bd9b1ce52ae99667757e9ee.jar" />
+    </item>
+    <item
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_a4ea006b60a31b1ef1f45205b3aa598eb0850127.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.3.0_3f5ab52846e31ab42a885098b2f6498ef331f2f1.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.3.0_329cf5a581de10aadf9f4d7313124efcb7aefcf8.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\.gradle\caches\modules-2\files-2.1\com.readystatesoftware.systembartint\systembartint\1.0.3\de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287\systembartint-1.0.3.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\systembartint-1.0.3_2bc82aa51a4687403b29c944007c30c7a88e8c5c.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.3.0_57ca31a24ce30a977162332628d1a5f5620f9e09.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_07f9fd116688a33467b2c6a4372775afcbe1e985.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\.gradle\caches\modules-2\files-2.1\cz.msebera.android\httpclient\4.3.6\526a9f794eab830eae4f23a62c572878b3f491ab\httpclient-4.3.6.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\httpclient-4.3.6_db6a462467553f64b2b2d7a64d4d28e084af5409.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.3.0_9da2e38c842c6b0c614c8b1e4ed90a8392f0975f.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.3.0_ee375e2358c79d6187aab8b31767a1b6a7ea52b6.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\Desktop\hello-world\app\libs\nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0_47003c8f90c1c7dc45c9472d505239d925be0cc2.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\exploded-aar\im.fir\fir-sdk\1.3.7\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="cfda5d835c72941d6633845276136830328b616c">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\im.fir-fir-sdk-1.3.7_c7288b26639ae1214edbd3df74df00419601e735.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\gson-2.4_f73f095ca8ee682def089a1d650e87c7ef6c24c6.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\.gradle\caches\modules-2\files-2.1\com.loopj.android\android-async-http\1.4.9\386a4339ffe52d5d63e80f9bed8d2b1d1a418249\android-async-http-1.4.9.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.9_1d26898d73781cee82a07d3092321953e325e486.jar" />
+    </item>
+    <item
+        jar="C:\Users\machenike\Desktop\hello-world\app\libs\afinal_0.5_bin.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="89729e3bc7f76890363b10e1e0dc5e57964c7807">
+        <dex dex="C:\Users\machenike\Desktop\hello-world\app\build\intermediates\pre-dexed\debug\afinal_0.5_bin_13ab3cfa58d972390b0306b14b68794f20621158.jar" />
+    </item>
+
+</items>

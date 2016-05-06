@@ -14,7 +14,6 @@ public class Command {
         public static final int HOT_STOP = 2;
         public static final int COLD = 3;
         public static final int COLD_STOP = 4;
-
     }
     public static class Plug{
         public static final int ON =1;

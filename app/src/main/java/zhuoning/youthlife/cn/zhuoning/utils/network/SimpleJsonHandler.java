@@ -37,7 +37,7 @@ public class SimpleJsonHandler extends JsonHttpResponseHandler {
     }
 
     @Override
-    public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-        Toast.makeText(mContext, "网络请求失败，请检查网络", Toast.LENGTH_SHORT).show();
+    public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+        Toast.makeText(mContext, "操作失败，请检查网络", Toast.LENGTH_SHORT).show();
     }
 }

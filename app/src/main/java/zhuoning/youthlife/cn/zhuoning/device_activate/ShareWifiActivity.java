@@ -39,7 +39,7 @@ import zhuoning.youthlife.cn.zhuoning.vo.DeviceType;
 import zhuoning.youthlife.cn.zhuoning.vo.ResponseKey;
 import zhuoning.youthlife.cn.zhuoning.vo.URL;
 
-import static zhuoning.youthlife.cn.zhuoning.utils.network.RequestFunc.pActivateDevice;
+import static zhuoning.youthlife.cn.zhuoning.utils.network.RequestParam.pActivateDevice;
 
 /**
  *  share wifi
